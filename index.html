@@ -18,11 +18,12 @@
         <main class="d-flex flex-row mx-10vw">
             <article class="my-5 mx-5p">
                 <ul class="list-unstyled">
-                    <li class="my-10p">
-                        <section
+                    <li>
+                        <button
                             class="little-card background-transition align-content-center"
+                            onclick="verBitcoin()"
                         >
-                            <div class="mt-4 text-center">
+                            <div class="text-white fw-bold mt-4 text-center">
                                 <img
                                     src="./img/bitcoin-logo.svg"
                                     width="50px"
@@ -35,13 +36,14 @@
                                     >
                                 </p>
                             </div>
-                        </section>
+                        </button>
                     </li>
-                    <li class="my-10p">
-                        <section
+                    <li>
+                        <button
                             class="little-card background-transition align-content-center"
+                            onclick="verEthereum()"
                         >
-                            <div class="mt-4 text-center">
+                            <div class="text-white fw-bold mt-4 text-center">
                                 <img
                                     src="./img/ethereum-logo.svg"
                                     width="50px"
@@ -52,13 +54,14 @@
                                     2.959,50<span class="small-text"> EUR</span>
                                 </p>
                             </div>
-                        </section>
+                        </button>
                     </li>
-                    <li class="my-10p">
-                        <section
+                    <li>
+                        <button
                             class="little-card background-transition align-content-center"
+                            onclick="verLitecoin()"
                         >
-                            <div class="mt-4 text-center">
+                            <div class="text-white fw-bold mt-4 text-center">
                                 <img
                                     src="./img/litecoin-logo.svg"
                                     width="50px"
@@ -69,16 +72,31 @@
                                     77,64<span class="small-text"> EUR</span>
                                 </p>
                             </div>
-                        </section>
+                        </button>
                     </li>
                 </ul>
             </article>
             <article class="my-5 mx-5p w-100">
-                <div class="big-card text-center background-transition">
-                    <canvas id="grafica" width="400" height="400"></canvas>
+                <div
+                    id="bitcoin"
+                    class="big-card text-center background-transition"
+                >
+                    Ejemplo bitcoin
+                </div>
+                <div
+                    id="ethereum"
+                    class="big-card text-center background-transition"
+                >
+                    Ejemplo Ethereum
+                </div>
+                <div
+                    id="litecoin"
+                    class="big-card text-center background-transition"
+                >
+                    Ejemplo Litecoin
                 </div>
             </article>
+            <script src="./js/hidden.js"></script>
         </main>
-        <script src="./js/grafica.js"></script>
     </body>
 </html>
