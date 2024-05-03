@@ -1,3 +1,8 @@
+GITHUB : 
+- hugomartinromero
+- pablofoleon
+- ManuCastro24
+
 # Proyecto-3-Trimestre-Cripto
 
 ## Definición del proyecto
