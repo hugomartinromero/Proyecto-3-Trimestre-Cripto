@@ -97,3 +97,8 @@ body{
   .ayuda:hover {
     background-color: #128c7e;
   }
+
+  #pregunta{
+    color: white;
+    margin-right: 10px;
+  }
