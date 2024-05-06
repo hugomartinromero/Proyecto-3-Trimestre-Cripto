@@ -6,6 +6,10 @@
     background: #23272e;
 }
 
+.bg-grey2 {
+    background: #212121;
+}
+
 .text-yellow {
     color: #f0b90b;
 }
@@ -32,7 +36,7 @@
     border-radius: 30px;
     background: #212121;
     box-shadow: 5px 5px 30px rgb(25, 25, 25);
-    margin: 50px 0;
+    margin: 2vh 0;
 }
 
 .big-card {
@@ -41,7 +45,7 @@
     border-radius: 30px;
     background: #212121;
     box-shadow: 15px 15px 30px rgb(25, 25, 25);
-    margin: 50px 0;
+    margin: 2vh 0;
 }
 
 .background-transition {
@@ -50,4 +54,14 @@
 
 .background-transition:hover {
     background: #252525;
+}
+
+.coin {
+    animation: rotar 7s infinite linear;
+}
+
+@keyframes rotar {
+    100% {
+        transform: rotateY(360deg);
+    }
 }

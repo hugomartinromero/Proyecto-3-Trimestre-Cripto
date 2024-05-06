@@ -12,92 +12,197 @@
         />
         <link href="css/styles.css" rel="stylesheet" />
         <title>CriptoSim</title>
-        <link rel="shortcut icon" href="/Img/bitcoin-logo.svg" type="image/x-icon">
-        <style></style>
+        <link
+            rel="shortcut icon"
+            href="/img/bitcoin-logo.svg"
+            type="image/x-icon"
+        />
     </head>
     <body class="bg-dark text-white fw-bold">
-        <main class="d-flex flex-row mx-10vw">
-            <article class="my-5 mx-5p">
-                <ul class="list-unstyled">
-                    <li>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">
+                    <img
+                        src="./img/bitcoin-logo.svg"
+                        alt="logo bitcoin"
+                        width="60px"
+                        class="coin"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link mx-2 active"
+                                aria-current="page"
+                                href="./index.html"
+                                >Inicio</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link mx-2 active"
+                                href="./html/contacto.html"
+                                >Contáctanos</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link mx-2 active"
+                                href="./html/iniciarsesion.html"
+                                >Iniciar Sesión</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <article class="container">
+            <article class="row">
+                <article class="col-2">
+                    <ul class="list-unstyled">
+                        <li>
+                            <button
+                                class="little-card background-transition align-content-center"
+                                onclick="verBitcoin()"
+                            >
+                                <div
+                                    class="text-white fw-bold mt-2 text-center"
+                                >
+                                    <img
+                                        src="./img/bitcoin-logo.svg"
+                                        width="50px"
+                                        alt="logo bitcoin"
+                                    />
+                                    <p class="h4 mt-2">Bitcoin</p>
+                                    <span
+                                        id="precioBitcoin"
+                                        class="text-yellow"
+                                    ></span>
+                                    <span
+                                        name="moneda"
+                                        class="small-text text-yellow"
+                                    ></span>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="little-card background-transition align-content-center"
+                                onclick="verEthereum()"
+                            >
+                                <div
+                                    class="text-white fw-bold mt-2 text-center"
+                                >
+                                    <img
+                                        src="./img/ethereum-logo.svg"
+                                        width="50px"
+                                        alt="logo ethereum"
+                                    />
+                                    <p class="h4 mt-2">Ethereum</p>
+                                    <span
+                                        id="precioEthereum"
+                                        class="text-yellow"
+                                    ></span>
+                                    <span
+                                        name="moneda"
+                                        class="small-text text-yellow"
+                                    ></span>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="little-card background-transition align-content-center"
+                                onclick="verLitecoin()"
+                            >
+                                <div
+                                    class="text-white fw-bold mt-2 text-center"
+                                >
+                                    <img
+                                        src="./img/litecoin-logo.svg"
+                                        width="50px"
+                                        alt="logo litecoin"
+                                    />
+                                    <p class="h4 mt-2">Litecoin</p>
+                                    <span
+                                        id="precioLitecoin"
+                                        class="text-yellow"
+                                    ></span>
+                                    <span
+                                        name="moneda"
+                                        class="small-text text-yellow"
+                                    ></span>
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
+                </article>
+                <article class="col-10">
+                    <article class="w-100">
                         <button
-                            class="little-card background-transition align-content-center"
-                            onclick="verBitcoin()"
+                            id="bitcoin"
+                            class="big-card text-white fw-bold background-transition"
                         >
-                            <div class="text-white fw-bold mt-4 text-center">
-                                <img
-                                    src="./img/bitcoin-logo.svg"
-                                    width="50px"
-                                    alt=""
-                                />
-                                <p class="h4 mt-2">Bitcoin</p>
-                                <p class="text-yellow">
-                                    58.918,41<span class="small-text">
-                                        EUR</span
-                                    >
-                                </p>
+                            <div class="d-flex align-items-baseline p-5">
+                                <h2>Bitcoin</h2>
+                                <p class="small-text">BTC</p>
                             </div>
+
+                            <img
+                                src="./img/criptomonedas-grafica.jpg"
+                                alt="grafica ejemplo"
+                                class="grafica-ejemplo m-5"
+                            />
                         </button>
-                    </li>
-                    <li>
                         <button
-                            class="little-card background-transition align-content-center"
-                            onclick="verEthereum()"
+                            id="ethereum"
+                            class="big-card text-white fw-bold background-transition"
                         >
-                            <div class="text-white fw-bold mt-4 text-center">
-                                <img
-                                    src="./img/ethereum-logo.svg"
-                                    width="50px"
-                                    alt=""
-                                />
-                                <p class="h4 mt-2">Ethereum</p>
-                                <p class="text-yellow">
-                                    2.959,50<span class="small-text"> EUR</span>
-                                </p>
+                            <div class="d-flex align-items-baseline p-5">
+                                <h2>Ethereum</h2>
+                                <p class="small-text">ETH</p>
                             </div>
+
+                            <img
+                                src="./img/criptomonedas-grafica.jpg"
+                                alt="grafica ejemplo"
+                                class="grafica-ejemplo m-5"
+                            />
                         </button>
-                    </li>
-                    <li>
                         <button
-                            class="little-card background-transition align-content-center"
-                            onclick="verLitecoin()"
+                            id="litecoin"
+                            class="big-card text-white fw-bold background-transition"
                         >
-                            <div class="text-white fw-bold mt-4 text-center">
-                                <img
-                                    src="./img/litecoin-logo.svg"
-                                    width="50px"
-                                    alt=""
-                                />
-                                <p class="h4 mt-2">Litecoin</p>
-                                <p class="text-yellow">
-                                    77,64<span class="small-text"> EUR</span>
-                                </p>
+                            <div class="d-flex align-items-baseline p-5">
+                                <h2>Litecoin</h2>
+                                <p class="small-text">LTC</p>
                             </div>
+
+                            <img
+                                src="./img/criptomonedas-grafica.jpg"
+                                alt="grafica ejemplo"
+                                class="grafica-ejemplo m-5"
+                            />
                         </button>
-                    </li>
-                </ul>
+                    </article>
+                </article>
             </article>
-            <article class="my-5 mx-5p w-100">
-                <div
-                    id="bitcoin"
-                    class="big-card text-center background-transition"
-                >
-                    Ejemplo bitcoin
-                </div>
-                <div
-                    id="ethereum"
-                    class="big-card text-center background-transition"
-                >
-                    Ejemplo Ethereum
-                </div>
-                <div
-                    id="litecoin"
-                    class="big-card text-center background-transition"
-                >
-                    Ejemplo Litecoin
-                </div>
-            </article>
-            <script src="./js/hidden.js"></script>
-        </main>
+        </article>
+
+        <script src="./js/hidden.js"></script>
+        <script src="./js/ejemplo.js"></script>
     </body>
 </html>
