@@ -34,8 +34,8 @@ body {
   justify-content: center;
   align-items: center;
   background: #ffff;
-  width: 400px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
   z-index: 1000;
 }
 
@@ -50,6 +50,7 @@ body {
 
 #textoPopup {
   text-align: center;
+  font-size: 30px;
 }
 
 /* ESTILO BOTONES */
@@ -63,7 +64,7 @@ button {
   border: none;
   border-radius: var(--button_radius);
   background: var(--button_outline_color);
-  margin-left: 200px;
+  margin-left: 160px;
   margin-top: 50px;
   position: relative;
   z-index: 1;
