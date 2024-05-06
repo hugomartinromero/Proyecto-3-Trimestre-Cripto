@@ -12,9 +12,63 @@
         />
         <link href="css/styles.css" rel="stylesheet" />
         <title>CriptoSim</title>
-        <link rel="shortcut icon" href="/img/bitcoin-logo.svg" type="image/x-icon">
+        <link
+            rel="shortcut icon"
+            href="/img/bitcoin-logo.svg"
+            type="image/x-icon"
+        />
     </head>
     <body class="bg-dark text-white fw-bold">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">
+                    <img
+                        src="./img/bitcoin-logo.svg"
+                        alt="logo bitcoin"
+                        width="60px"
+                        class="coin"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link mx-2 active"
+                                aria-current="page"
+                                href="./index.html"
+                                >Inicio</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link mx-2 active"
+                                href="./html/contacto.html"
+                                >Contáctanos</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link mx-2 active"
+                                href="./html/iniciarsesion.html"
+                                >Iniciar Sesión</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <article class="container">
             <article class="row">
                 <article class="col-2">
@@ -98,24 +152,51 @@
                 </article>
                 <article class="col-10">
                     <article class="w-100">
-                        <article
+                        <button
                             id="bitcoin"
                             class="big-card text-white fw-bold background-transition"
                         >
-                            <img src="./img/criptomonedas-grafica.jpg" alt="grafica ejemplo" class="grafica-ejemplo">
-                        </article>
-                        <article
+                            <div class="d-flex align-items-baseline p-5">
+                                <h2>Bitcoin</h2>
+                                <p class="small-text">BTC</p>
+                            </div>
+
+                            <img
+                                src="./img/criptomonedas-grafica.jpg"
+                                alt="grafica ejemplo"
+                                class="grafica-ejemplo m-5"
+                            />
+                        </button>
+                        <button
                             id="ethereum"
                             class="big-card text-white fw-bold background-transition"
                         >
-                        <img src="./img/criptomonedas-grafica.jpg" alt="grafica ejemplo" class="grafica-ejemplo">
-                        </article>
-                        <article
+                            <div class="d-flex align-items-baseline p-5">
+                                <h2>Ethereum</h2>
+                                <p class="small-text">ETH</p>
+                            </div>
+
+                            <img
+                                src="./img/criptomonedas-grafica.jpg"
+                                alt="grafica ejemplo"
+                                class="grafica-ejemplo m-5"
+                            />
+                        </button>
+                        <button
                             id="litecoin"
                             class="big-card text-white fw-bold background-transition"
                         >
-                        <img src="./img/criptomonedas-grafica.jpg" alt="grafica ejemplo" class="grafica-ejemplo">
-                        </article>
+                            <div class="d-flex align-items-baseline p-5">
+                                <h2>Litecoin</h2>
+                                <p class="small-text">LTC</p>
+                            </div>
+
+                            <img
+                                src="./img/criptomonedas-grafica.jpg"
+                                alt="grafica ejemplo"
+                                class="grafica-ejemplo m-5"
+                            />
+                        </button>
                     </article>
                 </article>
             </article>

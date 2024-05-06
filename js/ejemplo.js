@@ -3,10 +3,6 @@ let dolar = "USD"
 
 let moneda = document.getElementsByName("moneda")
 
-for (let i = 0; i < moneda.length; i++) {
-    moneda[i].innerHTML = euro
-}
-
 let precioBitcoin = document.getElementById("precioBitcoin")
 
 precioBitcoin.innerHTML = "58.918,41"
@@ -19,3 +15,6 @@ let precioLitecoin = document.getElementById("precioLitecoin")
 
 precioLitecoin.innerHTML = "77,64"
 
+for (let i = 0; i < moneda.length; i++) {
+    moneda[i].innerHTML = euro
+}
