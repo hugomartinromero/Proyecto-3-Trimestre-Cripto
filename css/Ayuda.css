@@ -1,5 +1,4 @@
 body {
-  margin-top: 20px;
   background: #23272e;
 }
 
@@ -90,4 +89,13 @@ button:hover .button_top {
 button:active .button_top {
   /* Push the button downwards when pressed */
   transform: translateY(0);
+}
+
+#textoPopup{
+  color: black;
+}
+
+#linkCompraVenta{
+  color:#f0b90b;
+  text-decoration: none;
 }
