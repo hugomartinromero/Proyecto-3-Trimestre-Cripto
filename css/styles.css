@@ -46,6 +46,7 @@
     background: #212121;
     box-shadow: 15px 15px 30px rgb(25, 25, 25);
     margin: 2vh 0;
+    pointer-events: none;
 }
 
 .background-transition {
@@ -54,6 +55,14 @@
 
 .background-transition:hover {
     background: #252525;
+}
+
+.mb--1rem {
+    margin-bottom: -1rem;
+}
+
+.mb-07rem {
+    margin-bottom: calc(0.7rem - 2px);
 }
 
 .coin {
