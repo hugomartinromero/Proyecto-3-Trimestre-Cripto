@@ -1,0 +1,93 @@
+body {
+  margin-top: 20px;
+  background: #23272e;
+}
+
+/* ESTILO TITULO */
+.titulo {
+  text-align: center;
+  font-family: Arial Black;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 50px;
+  color: #f0b90b;
+  text-shadow: 0 1px 0 #212121, 0 2px 0 #23272e, 0 3px 0 #212121, 0 4px 0 #212121, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+}
+
+/* VENTANA POP-UP */
+.panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: transform 300ms;
+  z-index: -1;
+}
+
+.panel div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffff;
+  width: 600px;
+  height: 600px;
+  z-index: 1000;
+}
+
+.panel[data-on='on'] {
+  transform: scale(1);
+  z-index: 999; 
+}
+
+.panel[data-on='off'] {
+  transform: scale(0);
+}
+
+#textoPopup {
+  text-align: center;
+  font-size: 30px;
+}
+
+/* ESTILO BOTONES */
+button {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  margin-left: 160px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
