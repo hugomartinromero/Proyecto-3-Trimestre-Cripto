@@ -7,7 +7,8 @@ body{
     color:#000000 ;
 }
 #boton:hover {
-    background-color: #128c7e;
+    color: #f0b90b;
+    background:#23272e ;
   }
 
 .gradient-brand-color {
@@ -93,9 +94,7 @@ body{
     transform: translate(-50%, -50%);
   }
   
-  .ayuda:hover {
-    background-color: #128c7e;
-  }
+ 
 
   #pregunta{
     color: white;

@@ -36,6 +36,7 @@ body {
   width: 600px;
   height: 600px;
   z-index: 1000;
+  border-radius: .625rem .625rem .625rem .625rem;
 }
 
 .panel[data-on='on'] {
@@ -45,11 +46,15 @@ body {
 
 .panel[data-on='off'] {
   transform: scale(0);
+  z-index: 999;
 }
 
-#textoPopup {
+#textoPopup{
   text-align: center;
   font-size: 30px;
+  color: black;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* ESTILO BOTONES */
@@ -91,9 +96,6 @@ button:active .button_top {
   transform: translateY(0);
 }
 
-#textoPopup{
-  color: black;
-}
 
 #linkCompraVenta{
   color:#f0b90b;
