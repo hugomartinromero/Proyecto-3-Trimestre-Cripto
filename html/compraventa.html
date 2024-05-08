@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Hugo, Manuel, Pablo" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <title>Compra/Venta | CriptoSim</title>
+        <link
+            rel="shortcut icon"
+            href="../img/bitcoin-logo.svg"
+            type="image/x-icon"
+        />
+    </head>
+    <body class="bg-dark text-white fw-bold">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">
+                    <img
+                        src="../img/bitcoin-logo.svg"
+                        alt="logo bitcoin"
+                        width="60px"
+                        class="coin"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link mx-2 active"
+                                aria-current="page"
+                                href="../index.html"
+                                >Inicio</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link mx-2 active"
+                                href="./html/compraventa.html"
+                                >Comprar/Vender</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link mx-2 active"
+                                href="./contacto.html"
+                                >Contáctanos</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link mx-2 active"
+                                href="./iniciarsesion.html"
+                                >Iniciar Sesión</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <article class="w-50 mx-auto">
+            <article
+                class="big-card text-white fw-bold background-transition text-start p-5"
+            >
+                <h2 class="px-5">Comprar</h2>
+                <fieldset class="px-5">
+                    <div class="form-fieldset">
+                        <label for="cantidad" class="h5">Cantidad</label>
+                        <br />
+                        <input
+                            type="number"
+                            placeholder="Introducir importe"
+                            id="cantidad"
+                            name="cantidad"
+                            class="input-text px-n5"
+                        />
+                    </div>
+                    <div class="form-fieldset">
+                        <label for="recibir" class="h5">Recibir</label>
+                        <br />
+                        <input
+                            type="number"
+                            placeholder="0.00"
+                            id="recibir"
+                            name="recibir"
+                            class="input-text px-n5"
+                        />
+                    </div>
+                </fieldset>
+            </article>
+        </article>
+    </body>
+</html>

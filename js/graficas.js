@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // #region Gráfica bitcoin
     var bitcoin = document.getElementById("grafica-bitcoin").getContext("2d");
     var graficaBitcoin = new Chart(bitcoin, {
         type: "line",
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             datasets: [
                 {
                     label: "Precio",
-                    data: [21, 19, 10, 5, 8, 10],
+                    data: [52940, 54850, 58240, 59160, 59185, 58948],
                     borderColor: "#f0b90b",
                     borderWidth: 2,
                     fill: false,
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         options: {
             scales: {
                 y: {
-                    beginAtZero: true,
+                    beginAtZero: false,
                     ticks: {
                         color: 'rgba(255, 255, 255, 0.5)'
                     },
@@ -49,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
+    // #region Gráfica ethereum
     var ethereum = document.getElementById("grafica-ethereum").getContext("2d");
     var graficaEthereum = new Chart(ethereum, {
         type: "line",
@@ -64,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             datasets: [
                 {
                     label: "Precio",
-                    data: [19, 10, 8, 21, 10, 5],
+                    data: [2000, 2700, 2800, 2870, 2900, 2860],
                     borderColor: "#f0b90b",
                     borderWidth: 2,
                     fill: false,
@@ -74,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         options: {
             scales: {
                 y: {
-                    beginAtZero: true,
+                    beginAtZero: false,
                     ticks: {
                         color: 'rgba(255, 255, 255, 0.5)'
                     },
@@ -99,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
+    // #region Gráfica litecoin
     var litecoin = document.getElementById("grafica-litecoin").getContext("2d");
     var graficaLitecoin = new Chart(litecoin, {
         type: "line",
@@ -114,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
             datasets: [
                 {
                     label: "Precio",
-                    data: [20, 19, 5, 8, 10, 10],
+                    data: [77, 90, 83, 80, 93, 87],
                     borderColor: "#f0b90b",
                     borderWidth: 2,
                     fill: false,
@@ -124,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
         options: {
             scales: {
                 y: {
-                    beginAtZero: true,
+                    beginAtZero: false,
                     ticks: {
                         color: 'rgba(255, 255, 255, 0.5)'
                     },
@@ -149,3 +152,25 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 });
+
+// #region Ejemplo
+let euro = "EUR"
+let dolar = "USD"
+
+let moneda = document.getElementsByName("moneda")
+
+let precioBitcoin = document.getElementById("precioBitcoin")
+
+precioBitcoin.innerHTML = "58.948"
+
+let precioEthereum = document.getElementById("precioEthereum")
+
+precioEthereum.innerHTML = "2.860"
+
+let precioLitecoin = document.getElementById("precioLitecoin")
+
+precioLitecoin.innerHTML = "87"
+
+for (let i = 0; i < moneda.length; i++) {
+    moneda[i].innerHTML = euro
+}
