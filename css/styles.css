@@ -43,6 +43,10 @@
     margin: 0 -1rem;
 }
 
+.m-n10 {
+    margin: -3rem;
+}
+
 /* Clases NavBar */
 .coin {
     animation: rotar 7s infinite linear;
@@ -101,8 +105,9 @@
     transition: 0.25s;
 }
 
-.form-fieldset:has(.input-text:focus) {
-    outline: 2px solid #febf00;
+.form-fieldset:has(.input-text:focus),
+.form-fieldset:hover {
+    outline: 2px solid #f0b90b;
     outline-offset: 5px;
 }
 
@@ -115,6 +120,18 @@
     color: rgba(255, 255, 255, 0.6);
     padding: 5px 1rem;
     transition: 0.25s;
+}
+
+.boton-compraventa {
+    height: 100px;
+    margin-top: -1vh;
+    border: 1px solid transparent;
+    border-radius: 28px 28px 0 0;
+    border-bottom: 1px solid #545454;
+}
+
+.boton-compraventa button:active {
+    color: #f0b90b;
 }
 
 input[type=number]::-webkit-inner-spin-button,
