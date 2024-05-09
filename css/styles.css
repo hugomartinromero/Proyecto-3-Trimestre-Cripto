@@ -47,6 +47,12 @@
     margin: -3rem;
 }
 
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Clases NavBar */
 .coin {
     animation: rotar 7s infinite linear;
@@ -95,7 +101,6 @@
 
 /* Clases Formularios */
 .form-fieldset {
-    width: 40%;
     border-radius: 10px;
     outline: 2px solid #363a41;
     border: 0;
@@ -144,3 +149,90 @@ input[type=number] {
     -moz-appearance: textfield;
     appearance: textfield;
 }
+
+select {
+    appearance: none;
+    border: 0;
+    box-shadow: none;
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: #212121;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: 0;
+}
+
+form:hover select {
+    background: #252525;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 10em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: -4px;
+    right: 0;
+    padding: 1em;
+    background-color: transparent;
+    transition: .25s all ease;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    color: #f0b90b;
+}
+
+/* Reiniciar estilos botón */
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Estilos botón */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* Texto cuando pasas el ratón por encima */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
