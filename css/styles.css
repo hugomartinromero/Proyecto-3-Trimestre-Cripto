@@ -47,6 +47,10 @@
     margin: -3rem;
 }
 
+.my-15{
+    margin: -6rem 0;
+}
+
 .vertical-center {
     display: flex;
     justify-content: center;
