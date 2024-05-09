@@ -30,6 +30,8 @@ vender.classList.add("visually-hidden")
 
 function verCompra() {
     vender.classList.add("visually-hidden")
+    comprar.classList.add("text-yellow")
+    comprar.classList.remove("text-white")
     comprar.classList.remove("visually-hidden")
 }
 
