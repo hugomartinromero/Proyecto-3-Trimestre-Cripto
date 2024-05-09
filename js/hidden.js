@@ -10,13 +10,30 @@ function verBitcoin() {
     litecoin.classList.add("visually-hidden")
     bitcoin.classList.remove("visually-hidden")
 }
+
 function verEthereum() {
     litecoin.classList.add("visually-hidden")
     bitcoin.classList.add("visually-hidden")
     ethereum.classList.remove("visually-hidden")
 }
+
 function verLitecoin() {
     bitcoin.classList.add("visually-hidden")
     ethereum.classList.add("visually-hidden")
     litecoin.classList.remove("visually-hidden")
+}
+
+let comprar = document.getElementById("comprar")
+let vender = document.getElementById("vender")
+
+vender.classList.add("visually-hidden")
+
+function verCompra() {
+    vender.classList.add("visually-hidden")
+    comprar.classList.remove("visually-hidden")
+}
+
+function verVenta() {
+    comprar.classList.add("visually-hidden")
+    vender.classList.remove("visually-hidden")
 }
