@@ -1,0 +1,18 @@
+
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+
+    .input-registro{
+        outline: 3px solid  #f0b90b;
+    }
+    .card-registration .select-arrow {
+
+    top: 13px;
+
+    }
+
+    
