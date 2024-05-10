@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | CriptoSim</title>
+
+    <link rel="shortcut icon" href="/Img/bitcoin-logo.svg" type="image/x-icon">
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="/css/perfil.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-white fw-bold">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/bitcoin-logo.svg" alt="logo bitcoin" width="60px" class="coin">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" href="./compraventa.html">Comprar/Vender</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" href="./contacto.html">Contáctanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" href="./iniciarsesion.html">Iniciar Sesión/Registro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container emp-profile">
+        <form method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <img id="user-photo"
+                            src="/Img/perfil.jpeg"
+                            alt="" />
+                        <div class="file btn btn-lg btn-primary">
+                            Change Photo
+                            <input type="file" name="file" id="photo-file" accept="image/*" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="profile-head">
+                        
+                        <h5 id="miPerfil">
+                            Mi Perfil
+                        </h5>
+                        <br><br><br>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                    aria-controls="home" aria-selected="true">Perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                    aria-controls="profile" aria-selected="false">Monedero</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button>Editar Perfil</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-work">
+                        <!--BOTÓN MONEDERO-->
+                    </div>
+                </div>
+                <div class="col-md-8 perfil">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Nombre</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Juan</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Apellidos</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>García García</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Fecha Nacimiento</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>02-02-2020</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Correo</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>ejemplo@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Móvil</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>123 123 123</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                           
+                            <!--LINK MONEDERO-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script>
+        //Para cambiar la foto del usuario y que se actualice
+        $(document).ready(function () {
+            $('#photo-file').change(function () {
+                var file = this.files[0];
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#user-photo').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(file);
+            });
+        });
+    </script>
+</body>
+
+
+</html>
