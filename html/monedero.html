@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Monedero</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/img/bitcoin-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/monedero.css">
+</head>
+
+<body class="bg-dark text-white fw-bold">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/bitcoin-logo.svg" alt="logo bitcoin" width="60px" class="coin">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" href="./compraventa.html">Comprar/Vender</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" href="./contacto.html">Contáctanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" href="./iniciarsesion.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="form-fieldset bg-grey2">
+            <label for="Balance estimado" class="h5">Balance estimado</label><br>
+            <div class="d-flex">
+                <div class="d-flex flex-column">
+                    <input type="number" placeholder="0.00" id="Balance estimado" name="Balance estimado"
+                        class="input-text px-n5">
+                    <p>= <span id="balance-euros">0.00€</span></p>
+                </div>
+                <div class="select">
+                    <select class="background-transition">
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Ethereum">Ethereum</option>
+                        <option value="Litecoin">Litecoin</option>
+                    </select>
+                </div>
+
+                <a href="/html/compraventa.html"><button class="button">Depositar</button></a>
+                <a href="/html/compraventa.html"><button class="button">Retirar</button></a>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">Mis Activos</div>
+            <ul class="asset-list">
+                <li class="asset-item">
+                    <div>
+                    <img src="/img/bitcoin-logo.svg" width="30px" alt="LogoBitcoin">
+                    <span class="asset-name">Bitcoin (BTC):</span>
+                    </div>
+                    <span class="asset-balance">2.5 BTC</span>
+                </li>
+                <li class="asset-item">
+                    <div>
+                    <img src="/img/ethereum-logo.svg" width="30px" alt="LogoEthereum">
+                    <span class="asset-name">Ethereum (ETH):</span>
+                    </div>
+                    <span class="asset-balance">10.3 ETH</span>
+                </li>
+                <li class="asset-item">
+                    <div>
+                        <img src="/img/litecoin-logo.svg" width="30px" alt="LogoLitecoin">
+                        <span class="asset-name">Litecoin (LTC):</span>
+                    </div>
+                    <span class="asset-balance">50 LTC</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
