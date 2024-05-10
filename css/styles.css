@@ -47,7 +47,7 @@
     margin: -3rem;
 }
 
-.my-15{
+.my-15 {
     margin: -6rem 0;
 }
 
@@ -103,7 +103,7 @@
     background: #252525;
 }
 
-/* Clases Formularios */
+/* Clases Compra/Venta */
 .form-fieldset {
     border-radius: 10px;
     outline: 2px solid #363a41;
@@ -205,13 +205,13 @@ form:hover select {
     padding: 0;
     border: none;
     cursor: pointer;
-  }
-  
-  /* Estilos botón */
-  .button {
+}
+
+/* Estilos botón */
+.button {
     --border-right: 6px;
-    --text-stroke-color: rgba(255,255,255,0.6);
-    --animation-color: #37FF8B;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color: #f0b90b;
     --fs-size: 1em;
     letter-spacing: 3px;
     text-decoration: none;
@@ -221,9 +221,10 @@ form:hover select {
     text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke: 1px var(--text-stroke-color);
-  }
-  /* Texto cuando pasas el ratón por encima */
-  .hover-text {
+}
+
+/* Texto cuando pasas el ratón por encima */
+.hover-text {
     position: absolute;
     box-sizing: border-box;
     content: attr(data-text);
@@ -234,9 +235,39 @@ form:hover select {
     overflow: hidden;
     transition: 0.5s;
     -webkit-text-stroke: 1px var(--animation-color);
-  }
-  /* hover */
-  .button:hover .hover-text {
+}
+
+/* hover */
+.button:hover .hover-text {
     width: 100%;
     filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+/* Clases Satisfacción */
+
+.select-satisfaccion:hover, form:hover .select-satisfaccion {
+    background-color: white;
+}
+
+.boton-satisfaccion {
+    background: #fbca1f;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
   }
+  
+  .boton-satisfaccion:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  .boton-satisfaccion:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+  
