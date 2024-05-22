@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (loginForm) {
         var loginButton = document.getElementById('loginButton');
-        var showPasswordButton = document.getElementById('showPasswordButton'); // Nuevo: el botón para mostrar/ocultar contraseña
-        var passwordInput = document.getElementById('form2Example2'); // Nuevo: el campo de contraseña
+        var showPasswordButton = document.getElementById('showPasswordButton'); //Botón para mostrar/ocultar contraseña
+        var passwordInput = document.getElementById('form2Example2'); //Campo de contraseña
 
         loginButton.addEventListener('click', function(event) {
             event.preventDefault();
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Nuevo: Agregar evento de clic al botón de mostrar/ocultar contraseña
+        //Agregar botón de mostrar/ocultar contraseña
         if (showPasswordButton) {
             showPasswordButton.addEventListener('click', function() {
                 if (passwordInput.type === 'password') {

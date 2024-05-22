@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var nameRegex = /^[a-zA-Z\s]{1,20}$/;
         var lastNameRegex = /^[a-zA-Z\s]{1,35}$/;
-        var phoneRegex = /^\d{9}$/;  // Número exacto de 9 dígitos
+        var phoneRegex = /^\d{9}$/;
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
