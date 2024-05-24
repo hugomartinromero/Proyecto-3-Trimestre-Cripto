@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // #region Crear historial
+    let historialTransacciones = [];
+
     // #region Generar precios
     function generarPrecios(min, max) {
         return parseFloat((Math.random() * (max - min) + min).toFixed(2));
@@ -30,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 cvalorConvertido = ccantidad * (cmoneda === 'Euro' ? (1 / nuevoPrecioLitecoin) : (1.1 / nuevoPrecioLitecoin));
                 break;
             default:
-                valorConvertido = 0;
+                cvalorConvertido = 0;
                 break;
         }
 
@@ -56,12 +59,41 @@ document.addEventListener("DOMContentLoaded", function () {
                 vvalorConvertido = vcantidad * (vmoneda === 'Euro' ? (1 / nuevoPrecioLitecoin) : (1.1 / nuevoPrecioLitecoin));
                 break;
             default:
-                valorConvertido = 0;
+                vvalorConvertido = 0;
                 break;
         }
 
         vrecibirInput.value = cvalorConvertido.toFixed(8);
     }
+
+    // #Region Crear historial de transacciones
+    function registrarTransaccion(cantidad, moneda, tipo, precio) {
+        const transaccion = {
+            cantidad: cantidad,
+            moneda: moneda,
+            tipo: tipo,
+            precio: precio,
+            fecha: new Date().toLocaleString()
+        };
+
+        historialTransacciones.push(transaccion);
+        console.log("Transacción registrada:", transaccion);
+    }
+
+    const formulario = document.getElementById('formularioCompraVenta');
+    formulario.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const cantidad = parseFloat(document.getElementById('botonComprar').classList.contains('text-yellow') ? document.getElementById('c-cantidad').value : document.getElementById('v-cantidad').value);
+        const moneda = document.getElementById('c-moneda').value;
+        const tipo = document.getElementById('botonComprar').classList.contains('text-yellow') ? 'compra' : 'venta';
+        const precio = parseFloat(document.getElementById('c-recibir').value);
+
+        const precioTotal = cantidad * precio;
+
+        registrarTransaccion(cantidad, moneda, tipo, precioTotal);
+        formulario.reset();
+    });
 
     setInterval(actualizarPrecios, 2000);
 });
