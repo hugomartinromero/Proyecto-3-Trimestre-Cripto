@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var form = document.querySelector('form');
-    
-    form.addEventListener('submit', function(event) {
+
+    form.addEventListener('submit', function (event) {
         event.preventDefault();
 
         var firstName = document.getElementById('firstName').value.trim();
@@ -66,10 +66,18 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        //GUARDA LOS FATOS EN EL LOCALSTORAGE PARA LOS DATOS DE MI PERFIL
+
+        localStorage.setItem('registroNombre', firstName);
+        localStorage.setItem('registroApellidos', lastName);
+        localStorage.setItem('registroFechaNacimiento', birthdayDate);
+        localStorage.setItem('registroCorreo', emailAddress);
+        localStorage.setItem('registroTelefono', phoneNumber);
+
         // Guarda los datos en localStorage
         localStorage.setItem('registroEmail', emailAddress);
         localStorage.setItem('registroPassword', password);
-        
+
         console.log('Email registrado:', emailAddress);
         console.log('Password registrado:', password);
 
@@ -82,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
     passwordStrength.id = 'passwordStrength';
     passwordInput.parentNode.appendChild(passwordStrength);
 
-    passwordInput.addEventListener('input', function() {
+    passwordInput.addEventListener('input', function () {
         var password = passwordInput.value;
         var strengthMessage = '';
-        
+
         if (password.length < 8) {
             strengthMessage = 'Poco segura';
         } else if (password.length >= 8 && password.length < 12) {
@@ -103,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
     togglePasswordBtn.textContent = 'Mostrar Contraseña';
     passwordInput.parentNode.appendChild(togglePasswordBtn);
 
-    togglePasswordBtn.addEventListener('click', function() {
+    togglePasswordBtn.addEventListener('click', function () {
         if (passwordInput.type === 'password') {
             passwordInput.type = 'text';
             togglePasswordBtn.textContent = 'Ocultar Contraseña';

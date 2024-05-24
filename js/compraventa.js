@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // #region Crear historial
-    let historialTransacciones = [];
+    let historialTransacciones = JSON.parse(localStorage.getItem('historialTransacciones')) || [];
 
     // #region Generar precios
     function generarPrecios(min, max) {
@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         historialTransacciones.push(transaccion);
+        localStorage.setItem('historialTransacciones', JSON.stringify(historialTransacciones));
         console.log("Transacción registrada:", transaccion);
     }
 

@@ -7,7 +7,7 @@
     <title>Perfil | CriptoSim</title>
 
     <link rel="shortcut icon" href="/Img/bitcoin-logo.svg" type="image/x-icon">
-    
+
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link href="/css/perfil.css" rel="stylesheet">
@@ -19,7 +19,8 @@
             <a class="navbar-brand" href="../index.html">
                 <img src="../img/bitcoin-logo.svg" alt="logo bitcoin" width="60px" class="coin">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -45,18 +46,16 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="profile-img">
-                        <img id="user-photo"
-                            src="/Img/perfil.jpeg"
-                            alt="" />
+                        <img id="user-photo" src="/Img/perfil.jpeg" alt="" />
                         <div class="file btn btn-lg btn-primary">
-                           Cambiar Foto
-                            <input type="file" name="file" id="photo-file" accept="image/*"  />
+                            Cambiar Foto
+                            <input type="file" name="file" id="photo-file" accept="image/*" />
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 ">
                     <div class="profile-head">
-                        
+
                         <h5 id="miPerfil">
                             Mi Perfil
                         </h5>
@@ -73,15 +72,15 @@
                         </ul>
                     </div>
                 </div>
-                
+
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="profile-work">
                         <!--BOTÓN MONEDERO-->
-                        <p id="saldo">SALDO RESTANTE</p>
+                        <br>
+                        <button id="botonMonedero"> Monedero</button>
                         
-                        <p id="saldo_c">20,00€</p>
                     </div>
                 </div>
                 <div class="col-md-8 perfil">
@@ -92,7 +91,7 @@
                                     <label>Nombre</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>Juan</p>
+                                    <span id="nombre"></span>
                                 </div>
                             </div>
                             <div class="row">
@@ -100,7 +99,7 @@
                                     <label>Apellidos</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>García García</p>
+                                    <span id="apellidos"></span>
                                 </div>
                             </div>
                             <div class="row">
@@ -108,7 +107,7 @@
                                     <label>Fecha Nacimiento</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>02-02-2020</p>
+                                    <span id="fechaNacimiento"></span>
                                 </div>
                             </div>
                             <div class="row">
@@ -116,7 +115,7 @@
                                     <label>Correo</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>ejemplo@gmail.com</p>
+                                    <span id="correo"></span>
                                 </div>
                             </div>
                             <div class="row">
@@ -124,13 +123,27 @@
                                     <label>Móvil</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>123 123 123</p>
+                                    <span id="telefono"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                           
-                            <!--LINK MONEDERO-->
+                            <!--HISTORIAL-->
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Cantidad</th>
+                                        <th>Moneda</th>
+                                        <th>Tipo</th>
+                                        <th>Precio</th>
+                                        <th>Fecha</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="historialTabla">
+                                    <!-- Transacciones serán insertadas aquí -->
+                                </tbody>
+                            </table>
+                            <button id="borrarHistorialBtn" class="btn btn-danger">Borrar Historial</button>
                         </div>
                     </div>
                 </div>
@@ -140,19 +153,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script>
-        //Para cambiar la foto del usuario y que se actualice
-        $(document).ready(function () {
-            $('#photo-file').change(function () {
-                var file = this.files[0];
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#user-photo').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(file);
-            });
-        });
-    </script>
+    <script src="/js/perfil.js"></script>
 </body>
 
 
