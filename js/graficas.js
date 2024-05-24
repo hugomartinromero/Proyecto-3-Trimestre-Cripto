@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     // #region Generar precios
     function generarPrecios(min, max) {
         return parseFloat((Math.random() * (max - min) + min).toFixed(2));
@@ -179,9 +178,4 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         },
     });
-
-    // #region Mostrar precios
-    document.getElementById("precioBitcoin").innerHTML = preciosBitcoin[preciosBitcoin.length - 1];
-    document.getElementById("precioEthereum").innerHTML = preciosEthereum[preciosEthereum.length - 1];
-    document.getElementById("precioLitecoin").innerHTML = preciosLitecoin[preciosLitecoin.length - 1];
 });
