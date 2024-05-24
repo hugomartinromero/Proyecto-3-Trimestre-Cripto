@@ -26,6 +26,30 @@ Compra/Venta:
   - Integrante: Hugo
   - Tecnologías: HTML y CSS (Creación de la página compra/venta con sus estilos), JS (Generar los precios de las criptomonedas y guardar en un array el historial de las transacciones, ya sea compra o venta).
 
+Ayuda/Contáctanos:
+  - Integrante: Pablo
+  - Tecnologías: HTML y CSS (Creación de la página contacto con sus estilos), Js (Validación de los campos)
+
+Preguntas Frecuentes:
+  - Integrantes: Pablo
+  - Tecnologías: HTML y CSS (Creación de la página ayuda con sus estilos)
+
+Perfil:
+  -Integrantes: Pablo
+  - Tecnologías: HTML y CSS (Creación de la página perfil con sus estilos), Js (recogida de datos del transacciones del apartado de compra y venta, y guardarlos en en la pestaña historial, agregando boton para borrar | Recgida de datos del Registro guardando los datos y monstando en el apartado perfil los datos del registro)
+
+Inicio de Sesión:
+  - Integrantes: Manuel
+  - Tecnologías: HTML y CSS (Creación de la página inicio sesión con sus estilos), Js (Validación de los campos usando los datos del registro)
+
+Registro:
+  - Integrantes : Manuel
+  - Tecnologías: HTML y CSS (Creación de la página registro con sus estilos), Js (Recogida y validación de los campos, y guardado los datos para su uso en inicio de sesion)
+
+Monedero:
+  - Integrantes : Manuel
+  - Tecnologías: HTML y CSS (Creación de la página monedero con sus estilos), Js (Validación de los campos)
+
 ## Posibles mejoras
 - Ampliar el catálogo de inversiones. Hugo
 - Agregar sorteos para que los clientes participen. Manuel
