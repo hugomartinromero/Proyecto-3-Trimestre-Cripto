@@ -1,8 +1,3 @@
-GITHUB : 
-- hugomartinromero
-- pablofoleon
-- ManuCastro24
-
 # Proyecto-3-Trimestre-Cripto
 
 ## Definición del proyecto
@@ -21,9 +16,23 @@ El proyecto consiste en una página web de compra-venta de criptomonedas, pudien
   
 - Mi cuenta (Perfil, Historial compra-venta) Pablo (2 días aprox.) : La sección de "Mi cuenta" incluirá perfiles de usuario y un historial de sus transacciones de compra-venta. Se enfocará en proporcionar una experiencia personalizada y transparente para los usuarios al acceder a su información y seguimiento de actividades, asegurando que los usuarios puedan gestionar fácilmente su perfil y revisar su historial de transacciones.
 
+### Definición de tareas
+
+Página principal:
+  - Integrante: Hugo
+  - Tecnologías: HTML y CSS (Creación de la página principal con sus estilos), JS (Generación de las gráficas y sus datos).
+
+Compra/Venta:
+  - Integrante: Hugo
+  - Tecnologías: HTML y CSS (Creación de la página compra/venta con sus estilos), JS (Generar los precios de las criptomonedas y guardar en un array el historial de las transacciones, ya sea compra o venta).
 
 ## Posibles mejoras
 - Ampliar el catálogo de inversiones. Hugo
 - Agregar sorteos para que los clientes participen. Manuel
 - Agregar páginas individuales para cada criptomoneda (Descripción, ...). Pablo
 - Agregar chat a la página de ayuda. Hugo, Manuel, Pablo
+
+## GitHub
+- hugomartinromero
+- pablofoleon
+- ManuCastro24
