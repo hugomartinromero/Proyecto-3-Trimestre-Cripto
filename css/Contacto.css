@@ -2,6 +2,18 @@ body{
     background: #23272e;
 }
 
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f0b90b; 
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
 #boton{
     background: #f0b90b;
     color:#000000 ;
@@ -10,6 +22,11 @@ body{
     color: #f0b90b;
     background:#23272e ;
   }
+
+  #message {
+    max-height: 150px; 
+    resize: none; 
+}
 
 .gradient-brand-color {
     background-image: -webkit-linear-gradient(0deg, #376be6 0%, #6470ef 100%);
